@@ -1,10 +1,17 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px; /* Remove top padding */
     scroll-behavior: smooth; /* Enable smooth scrolling for the whole page */
 }
 header {
@@ -12,6 +19,7 @@ header {
     margin-bottom: 40px;
     border-bottom: 2px solid #2c3e50;
     padding-bottom: 20px;
+    margin-top: 20px; /* Add margin to create space between navbar and header */
 }
 
 .logo-container {
@@ -80,7 +88,8 @@ footer {
     width: 100%;
     z-index: 1000;
     margin-bottom: 20px;
-    border-radius: 5px;
+    margin-top: 0; /* Ensure no top margin */
+    border-radius: 0 0 5px 5px; /* Only round the bottom corners */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
