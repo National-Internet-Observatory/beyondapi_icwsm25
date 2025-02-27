@@ -152,6 +152,51 @@ section {
     flex: 1;
 }
 
+/* Enhanced contact information styles */
+.contact-info {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+.contact-label {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.contact-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.contact-link:hover {
+    color: #2980b9;
+    transform: translateY(-1px);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.contact-link i {
+    font-size: 1.1em;
+}
+
 /* Make the layout responsive */
 @media (max-width: 768px) {
     .organizer-content {
@@ -162,5 +207,9 @@ section {
 
     .headshot {
         margin-bottom: 15px;
+    }
+
+    .contact-info {
+        justify-content: center;
     }
 }
