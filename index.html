@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond APIs: Collecting Web Data for Research using the National Internet Observatory</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event listeners to navbar links for smooth scrolling
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Get the target section id
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    // Smooth scroll to the target section
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Offset for navbar height
+                        behavior: 'smooth'
+                    });
+
+                    // Update active class
+                    document.querySelectorAll('.navbar a').forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+
+            // Update active nav item on scroll
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+
+                // Get all sections
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        const currentId = '#' + section.getAttribute('id');
+                        document.querySelectorAll('.navbar a').forEach(navLink => {
+                            navLink.classList.remove('active');
+                            if (navLink.getAttribute('href') === currentId) {
+                                navLink.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -12,7 +59,15 @@
         <p><em>A Tutorial at ICWSM 2025</em></p>
     </header>
 
-    <section id="abstract">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#details">Tutorial Details</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+        </ul>
+    </nav>
+
+    <section id="overview">
         <h2>Abstract</h2>
         <p>The Internet serves as a vital platform for information access and global connectivity.
         Widespread online engagement offers unprecedented opportunities to study human behavior at scale, yet researchers face significant ethical and technical barriers when attempting to collect data for academic studies.</p>
@@ -23,14 +78,12 @@
         The tutorial presents NIO's informed data donation process, participant demographics and behavioral traces, and secure computing infrastructure.</p>
 
         <p>The tutorial incorporates interactive activities and hands-on sessions that demonstrate NIO's capabilities for enabling novel cross-disciplinary and cross-platform research across web and social media environments.</p>
-    </section>
 
-    <section id="prerequisites">
         <h2>Prerequisites</h2>
         <p>There are no formal prerequisites for participation. We encourage anyone interested in online activity data collection and research to join. While a background in digital behavioral research helps participants better understand the challenges and opportunities that NIO presents, it is not required to learn about this new data collection infrastructure.</p>
     </section>
 
-    <section id="duration">
+    <section id="details">
         <h2>Duration</h2>
         <p>The tutorial is 3 hours (180 minutes) long, designed as one continuous half-day session.</p>
 
@@ -87,9 +140,7 @@
                 <td>Open-ended Q&A session with all participants, and space for feedback about what participants would like NIO to collect.</td>
             </tr>
         </table>
-    </section>
 
-    <section id="outcomes">
         <h2>Learning Outcomes</h2>
         <p>By the end of the tutorial, participants will:</p>
         <ol>

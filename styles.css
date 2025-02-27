@@ -5,6 +5,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    scroll-behavior: smooth; /* Enable smooth scrolling for the whole page */
 }
 header {
     text-align: center;
@@ -68,6 +69,7 @@ footer {
     z-index: 1000;
     margin-bottom: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .navbar ul {
@@ -97,4 +99,12 @@ footer {
 
 .navbar li a.active {
     background-color: #3498db;
+    font-weight: bold;
+}
+
+/* Section spacing for better scrolling */
+section {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    min-height: 50vh; /* Ensure sections have enough height for scrolling */
 }
