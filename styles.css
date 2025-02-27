@@ -38,6 +38,10 @@ h2 {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     font-size: 1.8em;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
@@ -45,6 +49,10 @@ h3 {
     margin-bottom: 15px;
     color: #2c3e50;
     font-size: 1.4em;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Improve readability of list items */
@@ -202,10 +210,13 @@ h1::after {
     background-color: #f9f9f9;
     border-radius: 5px;
 }
+
 .organizer h3 {
     margin-top: 0;
     color: #2c3e50;
+    text-align: left;
 }
+
 .schedule {
     width: 100%;
     border-collapse: collapse;
