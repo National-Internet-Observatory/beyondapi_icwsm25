@@ -16,6 +16,19 @@ body {
     font-size: 16px;
 }
 
+/* Global link styling */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
 /* Paragraph styling for better readability */
 p {
     margin-bottom: 1.2em;
@@ -105,10 +118,11 @@ header {
     margin: 0 auto;
 }
 
+/* Conference info links - maintain existing styles but inherit from global */
 .conference-info a {
     color: #3498db;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal;
     transition: color 0.2s;
 }
 
@@ -168,6 +182,7 @@ header {
     color: #333;
 }
 
+/* Event details links - update to match global style */
 .event-details a {
     color: #3498db;
     text-decoration: none;
@@ -269,19 +284,23 @@ footer {
     display: inline-block; /* Changed from float to inline-block */
 }
 
+/* Navbar links - keep their unique styling for navigation */
 .navbar li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 15px; /* Reduced padding for more compact buttons */
+    padding: 10px 15px;
     text-decoration: none;
     transition: background-color 0.3s;
-    margin: 0 2px; /* Add small margin between buttons */
-    border-radius: 4px; /* Add slight rounding to buttons */
+    margin: 0 2px;
+    border-radius: 4px;
+    font-weight: normal;
 }
 
 .navbar li a:hover {
     background-color: #3498db;
+    color: white;
+    text-decoration: none; /* Override the global text-decoration */
 }
 
 .navbar li a.active {
@@ -342,9 +361,11 @@ section {
     font-weight: 500;
 }
 
+/* Contact links - maintain special styling while inheriting global colors */
 .contact-link {
     color: #3498db;
     text-decoration: none;
+    font-weight: normal;
     transition: color 0.2s, transform 0.2s;
     display: inline-flex;
     align-items: center;
@@ -357,6 +378,7 @@ section {
     color: #2980b9;
     transform: translateY(-1px);
     background-color: rgba(52, 152, 219, 0.1);
+    text-decoration: underline;
 }
 
 .contact-link i {
