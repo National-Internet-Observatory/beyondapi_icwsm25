@@ -197,6 +197,49 @@ header {
     text-decoration: underline;
 }
 
+/* Venue notice styling */
+.venue-notice {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    border-left: 4px solid #f39c12;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.venue-notice p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    color: #856404;
+    line-height: 1.6;
+}
+
+.venue-notice p i {
+    color: #f39c12;
+    font-size: 1.1em;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.venue-notice a {
+    color: #d68910;
+    font-weight: 500;
+    text-decoration: underline;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.venue-notice a:hover {
+    color: #b7950b;
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
 h1 {
     color: #2c3e50;
     margin-bottom: 15px;
